@@ -1,5 +1,6 @@
 FileInputStream
+안녕하세요!
+반갑습니다.
 
 Hello
 Nice to meet you!
-=================================PrintStream으로 남겨요!

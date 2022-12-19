@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /*
  * FileInputStream
@@ -37,13 +39,17 @@ public class MainClass02 {
 			fos = new FileOutputStream(f5);
 			
 			int readByteCnt = 0;
-			byte[] b = new byte[3];
+			byte[] b = new byte[100];
+			
+			int i =1;
 			
 			// fis.read(b) => b 길이만큼 읽어서 b에 저장
 			// 읽은 길이값 readByteCnt에 저장			
 			while((readByteCnt = fis.read(b)) != -1) {
 				// fos.write() => b 데이터 readByteCnt 길이만큼 쓰기
 				fos.write(b, 0, readByteCnt);
+				System.out.println(i+ " : " + new String(b, 0, readByteCnt));
+				i++;
 			}
 			
 			
