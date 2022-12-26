@@ -6,18 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*
- * JDBC 설정
- * 	해당 DBMS 관련 jdbc.jar 추가해야한다. ex) ojdbc8.jar
- *  [Build path] -> [Configure Build path ...] -> [Libraries] 탭 
- *  -> [Add External JARs..] 로 jdbc.jar 파일 추가하기
- *  
- *  모르겠으면 구글링!!! 설정 및 설치는 구글링이 짱!!!
- * 
- */
-
-public class MainClass01 {
-	
+public class MainClass02 {
 	public static void main(String[] args) throws SQLException {
 		Connection conn = null;
 		Statement stmt = null;
@@ -33,24 +22,17 @@ public class MainClass01 {
 			
 			// 3. 쿼리 수행을 위한 Statement 객체 생성
 			stmt = conn.createStatement();
-			
-			// 4. SQL 쿼리작성
-			String departmentId = "20";
-			String sql ="SELECT * "
-					+ "FROM employees "
-					+ "WHERE department_id = " + departmentId;
+		
+			// 4. SQL 쿼리 작성
+			String sql = "INSERT INTO sales_reps VALUES (2 , '라이츄', 200, 0.2)";
 			
 			// 5. 쿼리 수행
-			rs = stmt.executeQuery(sql);
+			int result = stmt.executeUpdate(sql);
 			
 			
-			while(rs.next()) {
-				String employeeId = rs.getString(1);
-				String firstName = rs.getString(2);
-				String lastName = rs.getString(3);
-				
-				System.out.println(employeeId+"/"+firstName+"/"+lastName);
-			}
+			// 6. 실행결과 출력하기
+			System.out.println("result : " + result);
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
