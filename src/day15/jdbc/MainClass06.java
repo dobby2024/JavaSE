@@ -5,16 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class MainClass03 {
-	
+public class MainClass06 {
 	public static void main(String[] args) throws SQLException {
 		Connection conn = null;
 		// Statement 사용하지 말고 PreparedStatement 사용하자!!!
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		
 		
 		try {
 			// 1. 드라이버 클래스 정보 로딩
@@ -25,29 +22,17 @@ public class MainClass03 {
 			conn = DriverManager.getConnection(url, "hr", "hr");
 			
 			StringBuffer sql = new StringBuffer();
-			
-			// 3. 쿼리 작성
-			sql.append("SELECT id, name, salary ");
-			sql.append("FROM sales_reps ");
+			sql.append("DELETE FROM sales_reps ");
 			sql.append("WHERE id = ? ");
-			
-			// 4. PrepareStatement 객체 생성
+						
 			pstmt = conn.prepareStatement(sql.toString());
 			
-			pstmt.setInt(1, 2);
+			pstmt.setInt(1, 7);
 			
-			// 5. 쿼리 수행
-			rs = pstmt.executeQuery();
+			int result =  pstmt.executeUpdate();
 			
-			// 6. 실행결과 출력하기
-			while(rs.next()) {
-				int id = rs.getInt(1);
-				String name = rs.getString(2);
-				double salary = rs.getDouble(3);
-				
-				System.out.printf("%d, %s, %f \n", id, name, salary);
-				
-			}
+			System.out.println("result : " + result);
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
