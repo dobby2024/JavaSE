@@ -32,7 +32,6 @@ public class Variable07 {
 		int iInt3 = (int)iFloat2;	// 소수부분 절삭
 		System.out.println("iInt3: " + iInt3);
 		
-		
 	}
 
 }

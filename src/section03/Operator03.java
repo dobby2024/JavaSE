@@ -27,7 +27,9 @@ public class Operator03 {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("나이를 입력하세요 >>>");
+		
 		int age = scan.nextInt();
+		
 		if(age >= 19) {
 			System.out.println("만 19세 이상입니다.");
 		} else {
