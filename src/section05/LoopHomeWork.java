@@ -67,6 +67,7 @@ public class LoopHomeWork {
 		System.out.println("   ☆");
 		for(int i = 0; i < 4; i++) {
 			for(int j = 0; j < 7; j++) {
+				
 				if(j < 3 - i) {
 					System.out.print(" ");
 				} else if (j > 3 + i) {
