@@ -12,8 +12,11 @@ public class Method04 {
 	public static void main(String[] args) {
 		
 		printPokemon("025", "피카츄");
+		
 		printPokemon("025", "피카츄", "전기");
+		
 		printPokemon(25, "피카츄");
+		
 	}
 	
 	// 3번 동일
@@ -21,6 +24,7 @@ public class Method04 {
 		System.out.println("No. " + no);
 		System.out.println("Name. " + name);
 	}
+	
 	// 4. *****오버로딩(overloading) 메서드
 	public static void printPokemon(String no, String name, String type) {
 		System.out.println("No. " + no);
@@ -33,12 +37,5 @@ public class Method04 {
 		System.out.println("No. " + no);
 		System.out.println("Name. " + name);
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }
