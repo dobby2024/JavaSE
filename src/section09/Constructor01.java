@@ -20,7 +20,6 @@ public class Constructor01 {
 		System.out.println("=============");
 		
 		book1.getInfo();
-		
 	}
 }
 
