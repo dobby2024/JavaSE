@@ -9,7 +9,7 @@ public class JavaUtil05 {
 public static void main(String[] args) throws ParseException {
 		
 		String result = dateCalc(
-							"2023-08-14 08:16:00",
+							"2023-09-03 12:28:00",
 							"yyyy-MM-dd HH:mm:ss",
 							0,
 							0,
@@ -48,8 +48,7 @@ public static void main(String[] args) throws ParseException {
 		cal.add(Calendar.SECOND, +addSecond);
 		
 		return sdf.format(cal.getTime());
-		
-		
 	}
-
 }
+
+
