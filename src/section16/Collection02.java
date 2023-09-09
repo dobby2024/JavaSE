@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Vector;
 
 /*
- * List
+ * ***** List
  * 	컬렉션 프레임웍 중 하나 인터페이스로 순서가 있는 데이터 모음을 다루는 객체
  * 
  * 	선형 배열 객체
