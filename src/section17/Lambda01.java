@@ -31,8 +31,12 @@ public class Lambda01 {
 		MyLambdaFunction mlf2 = (int a, int b) -> a > b ? a : b;
 		System.out.println(mlf2.max(7, 9));
 		
+		// 3. 람다식을 이용한 익명함수
+		MyLambdaFunction2 mlf3 = (int a, int b, int c) -> {
+			System.out.println(a + b + c);
+		};
+		mlf3.sum(7, 9, 7);
 	}
-
 }
 
 @FunctionalInterface
@@ -40,6 +44,10 @@ interface MyLambdaFunction {
 	int max(int a, int b);
 }
 
+@FunctionalInterface
+interface MyLambdaFunction2 {
+	void sum(int a, int b, int c);
+}
 
 
 
