@@ -19,7 +19,6 @@ public class Lambda01 {
 		
 		// 1. 기존 익명클래스
 		MyLambdaFunction mlf = new MyLambdaFunction() {
-			
 			@Override
 			public int max(int a, int b) {
 				return a > b ? a : b;

@@ -1,5 +1,6 @@
 package section17;
 
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -12,7 +13,11 @@ import java.util.List;
 public class Lambda02 {
 	public static void main(String[] args) {
 		
-		List<String> names = List.of("Apple", "Bat", "Cat", "Dog");
+		// 불변리스트 객체 
+//		List<String> names = List.of("Apple", "Bat", "Cat", "Dog");
+		
+		List<String> names = Arrays.asList("Apple", "Bat", "Cat", "Dog");
+
 		
 //		printBasic(names);
 		printWithFP(names);
