@@ -25,9 +25,15 @@ public class Lambda03 {
 			.filter(e -> e.endsWith("at"))
 			.forEach(e -> System.out.println(e));
 	}
-	
-	
 }
+
+
+
+
+
+
+
+
 
 
 

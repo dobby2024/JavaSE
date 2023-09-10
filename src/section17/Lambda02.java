@@ -13,11 +13,12 @@ import java.util.List;
 public class Lambda02 {
 	public static void main(String[] args) {
 		
-		// 불변리스트 객체 
-//		List<String> names = List.of("Apple", "Bat", "Cat", "Dog");
+		// 불변리스트 객체 JDK 9 지원
+		List<String> names = List.of("Apple", "Bat", "Cat", "Dog");
 		
-		List<String> names = Arrays.asList("Apple", "Bat", "Cat", "Dog");
-
+//		List<String> names = Arrays.asList("Apple", "Bat", "Cat", "Dog");
+		
+		names.set(1, "Batman");
 		
 //		printBasic(names);
 		printWithFP(names);
