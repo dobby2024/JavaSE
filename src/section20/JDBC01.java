@@ -30,7 +30,9 @@ public class JDBC01 {
 			
 			
 			// 4. SQL 쿼리 작성
-			String sql = "SELECT * FROM employees WHERE department_id = 30 ORDER BY employee_id DESC";
+			String param = "30";
+			String sql = "SELECT * FROM employees WHERE department_id = "+ param 
+					+" ORDER BY employee_id DESC";
 			
 			// 5. 쿼리 실행
 			rs = stmt.executeQuery(sql);

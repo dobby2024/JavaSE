@@ -1,4 +1,18 @@
 package section20;
+/*
+ 
+sales_reps테이블 생성 쿼리
+
+CREATE TABLE sales_reps
+AS (
+    SELECT employee_id id, last_name name, salary, commission_pct 
+    FROM employees 
+    WHERE 1 = 2
+    )
+;
+  
+*/
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,7 +54,6 @@ public class JDBC03 {
 			} else {
 				System.out.println("데이터 추가 실패!!");
 			}
-			
 			
 			
 		} catch (Exception e) {
