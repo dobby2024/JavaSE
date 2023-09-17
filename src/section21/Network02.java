@@ -36,7 +36,7 @@ import java.net.URL;
  */
 public class Network02 {
 	public static void main(String[] args) throws MalformedURLException {
-		URL url = new URL("https:// n.news.naver.com:443/article/215/0001125423?ntype=RANKING");
+		URL url = new URL("https://n.news.naver.com:443/article/215/0001125423?ntype=RANKING");
 		
 		System.out.println("porotocol: " + url.getProtocol());
 		System.out.println("host: " + url.getHost());
